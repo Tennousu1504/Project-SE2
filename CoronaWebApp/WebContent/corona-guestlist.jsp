@@ -13,7 +13,10 @@
 </head>
 <body>
 
- <jsp:include page="nav-bar.jsp"></jsp:include>
+ <ul class="nav navbar-nav">
+				<li><a href="<%=request.getContextPath()%>/login">Login</a></li>
+				<li><a href="<%=request.getContextPath()%>/chart">Chart</a></li>
+			</ul>
 	<br>
       <div class="row">
 		<div class="container">
@@ -32,11 +35,11 @@
 						<th>New Cases (per million) </th>
 						<th>Total Deaths (per million) </th>
 						<th>New Deaths (per million) </th>
-						<%--<th>Total Tests </th>
+						<%-- <th>Total Tests </th>
 						<th>New Tests</th>
 						<th>Total Tests (per thousand)</th>
 						<th>New Tests (per thousand) </th>
-						<th>Tests Units </th>--%>
+						<th>Tests Units </th> --%>
 					</tr>
 				</thead>
 				<tbody>
@@ -54,14 +57,11 @@
 							<td><c:out value="${corona.new_cases_per_million}" /></td>
 							<td><c:out value="${corona.total_deaths_per_million}" /></td>
 							<td><c:out value="${corona.new_deaths_per_million}" /></td>
-						<%--	<td><c:out value="${corona.total_tests}" /></td>
+							<%-- <td><c:out value="${corona.total_tests}" /></td>
 							<td><c:out value="${corona.new_tests}" /></td>
 							<td><c:out value="${corona.total_tests_per_thousand}" /></td>
 							<td><c:out value="${corona.new_tests_per_thousand}" /></td>
 							<td><c:out value="${corona.tests_units}" /></td> --%>
-							<td><a href="edit?iso_code=<c:out value='${corona.iso_code}' />">Edit</a>
-								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?iso_code=<c:out value='${corona.iso_code}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

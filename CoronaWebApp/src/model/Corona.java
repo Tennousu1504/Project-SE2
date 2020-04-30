@@ -20,8 +20,7 @@ public class Corona {
 	
 	
 	
-	
-	
+	//fortest
 	public Corona(String iso_code, String location, String date, String total_cases) {
 		super();
 		this.iso_code = iso_code;
@@ -29,10 +28,10 @@ public class Corona {
 		this.date = date;
 		this.total_cases = total_cases;
 	}
+
 	public Corona(String iso_code, String location, String date, String total_cases, String new_cases,
 			String total_deaths, String new_deaths, String total_cases_per_million, String new_cases_per_million,
-			String total_deaths_per_million, String new_deaths_per_million, String total_tests, String new_tests,
-			String total_tests_per_thousand, String new_tests_per_thousand, String tests_units) {
+			String total_deaths_per_million, String new_deaths_per_million) {
 		super();
 		this.iso_code = iso_code;
 		this.location = location;
@@ -45,12 +44,20 @@ public class Corona {
 		this.new_cases_per_million = new_cases_per_million;
 		this.total_deaths_per_million = total_deaths_per_million;
 		this.new_deaths_per_million = new_deaths_per_million;
-		this.total_tests = total_tests;
-		this.new_tests = new_tests;
-		this.total_tests_per_thousand = total_tests_per_thousand;
-		this.new_tests_per_thousand = new_tests_per_thousand;
-		this.tests_units = tests_units;
 	}
+
+	public Corona() {
+		super();
+	}
+
+	public Corona(String iso_code) {
+		super();
+		this.iso_code = iso_code;
+	}
+	
+	
+	
+
 	public String getIso_code() {
 		return iso_code;
 	}
